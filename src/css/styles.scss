@@ -1,47 +1,16 @@
 @import 'lib/breakpoint';
 @import 'lib/breakpoint-slicer';
 @import "partials/mixin";
+@import "lib/bootstrap";
 @import "partials/fonts";
+@import "partials/icons";
 @import "partials/common";
+@import "partials/btn";
 @import "partials/header";
-
-
-.btn {
-  border: 0;
-  background: transparent;
-  text-align: center;
-  line-height: 1;
-  cursor: pointer;
-  transition: all .3s ease;
-
-  /* .button-default */
-  &-default {
-    padding: 8px 20px;
-    border-radius: 20px;
-    color: #ffffff;
-    background-color: #6093e3;
-    border: 1px solid #1a54ae;
-    font-size: 24px;
-    &:hover,
-    &:active {
-      background-color: #ffffff;
-      color: #6093e3;
-    }
-  }
-}
-
-.icon-phone::before {
-  margin-right: 5px;
-  background: url('../img/spritesheet.png') no-repeat -285px -149px;
-  width: 38px;
-  height: 38px;
-  display: inline-block;
-  vertical-align: middle;
-  content: '';
-}
+@import "partials/courses";
 
 .content {
-  margin-top: 25px;
+  margin-top: 35px;
   padding: 0 15px 15px;
   border: 3px solid #e0f5c0;
   border-top-color: transparent;

@@ -1,0 +1,23 @@
+.btn {
+  border: 0;
+  background: transparent;
+  text-align: center;
+  line-height: 1;
+  cursor: pointer;
+  transition: all .3s ease;
+
+  /* .button-default */
+  &-default {
+    padding: 8px 20px;
+    border-radius: 20px;
+    color: #ffffff;
+    background-color: #6093e3;
+    border: 1px solid #1a54ae;
+    font-size: 24px;
+    &:hover,
+    &:active {
+      background-color: #ffffff;
+      color: #6093e3;
+    }
+  }
+}
