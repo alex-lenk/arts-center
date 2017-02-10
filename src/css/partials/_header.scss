@@ -1,0 +1,122 @@
+header {
+  padding-top: 15px;
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+.header {
+  &-logo {
+    margin-bottom: 5px;
+  }
+  &-caption {
+    margin-bottom: 15px;
+    color: #542110;
+    font-size: 18px;
+  }
+  &-info {
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    &-phone {
+      font-size: 24px;
+      color: #191a19;
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+    }
+    &-text {
+      padding-top: 5px;
+      font-size: 30px;
+      color: #9444a9;
+      font-family: 'RupsterScriptFree', 'BlissPro', Corbel, Arial, sans-serif;
+    }
+  }
+  &-nav {
+    padding: 8px 0;
+    background-color: #6093e3;
+    border: 1px solid #1a54ae;
+    box-shadow: inset 0 0 3px 1px #7da7e8, inset 0 0 3px 1px #7da7e8;
+    &-menu {
+      display: flex;
+      align-items: center;
+      height: 100%;
+      li {
+        flex-grow: 1;
+        font-size: 18px;
+        text-transform: uppercase;
+        color: #ffffff;
+        &:not(:last-child) {
+          border-right: 1px solid #3d70c0;
+          box-shadow: 1px 0 0 #82aced;
+        }
+        &:first-child a {
+          &:not(:hover):not(.current)::before {
+            background-position: -56px -96px;
+          }
+        }
+        &:nth-child(2) a {
+          &::before {
+            width: 50px;
+            height: 37px;
+            background-position: 0 0;
+          }
+          &:not(:hover):not(.current)::before {
+            background-position: -60px 0;
+          }
+        }
+        &:nth-child(3) a {
+          &::before {
+            background-position: -120px 0;
+            width: 50px;
+            height: 42px;
+          }
+          &:not(:hover):not(.current)::before {
+            background-position: -120px -52px;
+          }
+        }
+        &:last-child a {
+          &::before {
+            background-position: 0 -47px;
+            width: 50px;
+            height: 39px;
+          }
+          &:not(:hover):not(.current)::before {
+            background-position: -60px -47px;
+          }
+        }
+      }
+      .current span {
+        color: #d1ee93;
+        border-bottom: 1px dotted;
+      }
+      .current, li:first-child a {
+        &::before {
+          width: 46px;
+          height: 46px;
+          background-position: 0 -96px;
+        }
+      }
+      .current, a {
+        text-decoration: none;
+        &::before {
+          background-image: url('../img/spritesheet.png');
+          background-repeat: no-repeat;
+          margin-right: 15px;
+          display: inline-block;
+          vertical-align: middle;
+          content: '';
+        }
+      }
+      a {
+        color: inherit;
+        display: block;
+        transition: all .3s ease;
+        &:hover {
+          color: #d1ee93;
+        }
+      }
+    }
+  }
+}
