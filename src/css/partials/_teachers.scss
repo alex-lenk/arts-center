@@ -1,0 +1,59 @@
+.teachers {
+  margin-bottom: 35px;
+  .title {
+    margin: 0 0 35px;
+    padding: 0;
+    font-size: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 1;
+    a {
+      text-decoration: none;
+    }
+  }
+  &-list {
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    li {
+      width: 246px;
+      &:first-child, &:nth-child(2) {
+        .teachers-photo::before {
+          background: url("../img/border-staff.png") no-repeat center;
+        }
+      }
+    }
+    a {
+      text-decoration: none;
+    }
+  }
+  &-photo {
+    width: 220px;
+    height: 220px;
+    margin-bottom: 20px;
+    display: block;
+    position: relative;
+    &::before {
+      width: 229px;
+      height: 229px;
+      background: url("../img/border-staff-2.png") no-repeat center;
+      display: inherit;
+      content: '';
+      position: absolute;
+      top: -8px;
+      left: -2px;
+      z-index: 5;
+    }
+    img {
+      border-radius: 50%;
+    }
+  }
+  &-name {
+    .text-uppercase {
+      display: block;
+    }
+  }
+  &-signature {
+    font-size: 14px;
+  }
+}

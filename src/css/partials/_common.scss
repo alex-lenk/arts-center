@@ -11,6 +11,14 @@ body {
   background-size: contain, contain;
 }
 
+a {
+  color: #3c6ebd;
+  transition: all .3s ease;
+  &:hover {
+    color: #5986cd;
+  }
+}
+
 button:focus, input:focus, select:focus, textarea:focus {
   outline: none;
 }
