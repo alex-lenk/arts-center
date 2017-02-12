@@ -1,8 +1,10 @@
 .audience {
-  padding-top: 25px;
-  padding-bottom: 45px;
+  padding: 15px;
   margin-bottom: 35px;
   background: url(../img/bg-audience.jpg) no-repeat;
+  @include from('s') {
+    padding: 25px 0 45px;
+  }
   .title {
     margin: 0 0 25px;
     color: #10933c;
@@ -11,10 +13,9 @@
     text-align: center;
   }
   &-border-img {
+    padding: 15px;
     position: relative;
     display: inline-block;
-    width: 515px;
-    height: 273px;
     cursor: pointer;
     &:hover {
       &::before {
@@ -22,19 +23,30 @@
       }
     }
     &::before {
-      width: 515px;
-      height: 273px;
+      width: 100%;
+      height: 100%;
       background: url(../img/border-work.png) no-repeat center;
-      display: inherit;
+      background-size: cover;
       content: '';
       position: absolute;
-      top: -8px;
-      left: -2px;
+      top: 0;
+      left: 0;
       z-index: 5;
       transition: all .3s ease;
     }
   }
   &-text {
     font-size: 24px;
+  }
+  @include to('xs') {
+    .slick-slider {
+      padding: 0 15px;
+    }
+    .slick-prev {
+      left: -15px;
+    }
+    .slick-next {
+      right: -15px;
+    }
   }
 }

@@ -1,8 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Центр искусств</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <link rel="stylesheet" href="css/lib.css">
     <link rel="stylesheet" href="css/styles.css">
 
@@ -16,7 +19,9 @@
 <body>
 <header class="container">
     <div class="header-logo">
-        <a href="#"><img src="img/logo.png" alt="Центр искусств"></a>
+        <a href="#">
+            <img src="img/logo-center.png" alt="Центр искусств">
+            <img src="img/logo-art.png" alt="Центр искусств"></a>
     </div>
 
     <div class="header-caption">при Московском государственном академическом художественном институте им. В.И.
@@ -37,10 +42,10 @@
 
     <nav class="header-nav">
         <ul class="header-nav-menu list-unstyled">
-            <li class="current"><span>Преподаватели</span></li>
-            <li><a href="#">Аудитории</a></li>
-            <li><a href="#">Работы выпускников</a></li>
-            <li><a href="#">Контакты </a></li>
+            <li class="current"><span class="text">Преподаватели</span></li>
+            <li><a href="#"><span class="text">Аудитории</span></a></li>
+            <li><a href="#"><span class="text">Работы выпускников</span></a></li>
+            <li><a href="#"><span class="text">Контакты</span></a></li>
         </ul>
     </nav>
 </header>
@@ -277,13 +282,13 @@
                 <span>Курсы витража</span>
             </li>
 
-            <li class="point icon-macrame" data-target="#macrame" aria-controls="macrame" role="tab" data-toggle="tab">
-                <span>Курсы макраме</span>
-            </li>
-
             <li class="point icon-embroidery" data-target="#embroidery" aria-controls="embroidery" role="tab"
                 data-toggle="tab">
                 <span>Курсы вышивки</span>
+            </li>
+
+            <li class="point icon-macrame" data-target="#macrame" aria-controls="macrame" role="tab" data-toggle="tab">
+                <span>Курсы макраме</span>
             </li>
         </ul>
     </section>
@@ -403,22 +408,22 @@
         <h2 class="title">АУДИТОРИИ</h2>
 
         <div class="multiple-items">
-            <div><span class="audience-border-img" data-src="/img/example/lecture-hall.jpg" data-fancybox
+            <div><span class="audience-border-img" data-src="img/example/lecture-hall.jpg" data-fancybox
                        data-caption=""><img src="img/example/lecture-hall.jpg" alt=""></span>
                 <div class="audience-text">Аудитория скульптуры</div>
             </div>
 
-            <div><span class="audience-border-img" data-src="/img/example/lecture-hall-2.jpg" data-fancybox
+            <div><span class="audience-border-img" data-src="img/example/lecture-hall-2.jpg" data-fancybox
                        data-caption=""><img src="img/example/lecture-hall-2.jpg" alt=""></span>
                 <div class="audience-text">Аудитория живописи и рисунка</div>
             </div>
 
-            <div><span class="audience-border-img" data-src="/img/example/lecture-hall-4.jpg" data-fancybox
+            <div><span class="audience-border-img" data-src="img/example/lecture-hall-4.jpg" data-fancybox
                        data-caption=""><img src="img/example/lecture-hall-4.jpg" alt=""></span>
                 <div class="audience-text">Аудитория скульптуры</div>
             </div>
 
-            <div><span class="audience-border-img" data-src="/img/example/lecture-hall-3.jpg" data-fancybox
+            <div><span class="audience-border-img" data-src="img/example/lecture-hall-3.jpg" data-fancybox
                        data-caption=""><img src="img/example/lecture-hall-3.jpg" alt=""></span>
                 <div class="audience-text">Аудитория живописи и рисунка</div>
             </div>
@@ -429,56 +434,69 @@
         <h2 class="title">Работы наших выпускников</h2>
         <ul class="work-graduates-list list-unstyled">
             <li>
-                <div class="img-work" data-src="/img/example/work-1.jpg" data-fancybox  data-caption="work-1.jpg">
-                    <img src="/img/example/work-1.jpg" alt=""></div>
+                <div class="img-work" data-src="img/example/work-1.jpg" data-fancybox data-caption="work-1.jpg">
+                    <img src="img/example/work-1.jpg" alt=""></div>
                 <span class="name">Артем Тарасов</span> <span class="age">12 лет</span>
-                <div class="job-title"></div>“Космонавт”
+                <div class="job-title"></div>
+                “Космонавт”
             </li>
             <li>
-                <div class="img-work" data-src="/img/example/work-2.jpg" data-fancybox  data-caption="work-1.jpg">
-                    <img src="/img/example/work-2.jpg" alt=""></div>
+                <div class="img-work" data-src="img/example/work-2.jpg" data-fancybox data-caption="work-1.jpg">
+                    <img src="img/example/work-2.jpg" alt=""></div>
                 <span class="name">Алина Петрова</span> <span class="age">14 лет</span>
-                <div class="job-title"></div>“Дождь”
+                <div class="job-title"></div>
+                “Дождь”
             </li>
             <li>
-                <div class="img-work" data-src="/img/example/work-3.jpg" data-fancybox  data-caption="work-1.jpg">
-                    <img src="/img/example/work-3.jpg" alt=""></div>
+                <div class="img-work" data-src="img/example/work-3.jpg" data-fancybox data-caption="work-1.jpg">
+                    <img src="img/example/work-3.jpg" alt=""></div>
                 <span class="name">Юлия Гончарова</span> <span class="age">16 лет</span>
-                <div class="job-title"></div>“Сказочный замок”
+                <div class="job-title"></div>
+                “Сказочный замок”
             </li>
             <li>
-                <div class="img-work" data-src="/img/example/work-4.jpg" data-fancybox  data-caption="work-1.jpg">
-                    <img src="/img/example/work-4.jpg" alt=""></div>
+                <div class="img-work" data-src="img/example/work-4.jpg" data-fancybox data-caption="work-1.jpg">
+                    <img src="img/example/work-4.jpg" alt=""></div>
                 <span class="name">Андрей Ткачев</span> <span class="age">10 лет</span>
-                <div class="job-title"></div>“Пикник”
+                <div class="job-title"></div>
+                “Пикник”
             </li>
 
             <li>
-                <div class="img-work" data-src="/img/example/work-1.jpg" data-fancybox  data-caption="work-1.jpg">
-                    <img src="/img/example/work-1.jpg" alt=""></div>
+                <div class="img-work" data-src="img/example/work-1.jpg" data-fancybox data-caption="work-1.jpg">
+                    <img src="img/example/work-1.jpg" alt=""></div>
                 <span class="name">Артем Тарасов</span> <span class="age">12 лет</span>
-                <div class="job-title"></div>“Космонавт”
+                <div class="job-title"></div>
+                “Космонавт”
             </li>
             <li>
-                <div class="img-work" data-src="/img/example/work-2.jpg" data-fancybox  data-caption="work-1.jpg">
-                    <img src="/img/example/work-2.jpg" alt=""></div>
+                <div class="img-work" data-src="img/example/work-2.jpg" data-fancybox data-caption="work-1.jpg">
+                    <img src="img/example/work-2.jpg" alt=""></div>
                 <span class="name">Алина Петрова</span> <span class="age">14 лет</span>
-                <div class="job-title"></div>“Дождь”
+                <div class="job-title"></div>
+                “Дождь”
             </li>
             <li>
-                <div class="img-work" data-src="/img/example/work-3.jpg" data-fancybox  data-caption="work-1.jpg">
-                    <img src="/img/example/work-3.jpg" alt=""></div>
+                <div class="img-work" data-src="img/example/work-3.jpg" data-fancybox data-caption="work-1.jpg">
+                    <img src="img/example/work-3.jpg" alt=""></div>
                 <span class="name">Юлия Гончарова</span> <span class="age">16 лет</span>
-                <div class="job-title"></div>“Сказочный замок”
+                <div class="job-title"></div>
+                “Сказочный замок”
             </li>
             <li>
-                <div class="img-work" data-src="/img/example/work-4.jpg" data-fancybox  data-caption="work-1.jpg">
-                    <img src="/img/example/work-4.jpg" alt=""></div>
+                <div class="img-work" data-src="img/example/work-4.jpg" data-fancybox data-caption="work-1.jpg">
+                    <img src="img/example/work-4.jpg" alt=""></div>
                 <span class="name">Андрей Ткачев</span> <span class="age">10 лет</span>
-                <div class="job-title"></div>“Пикник”
+                <div class="job-title"></div>
+                “Пикник”
             </li>
         </ul>
     </section>
+
+    <footer class="text-center">
+        <p>Детская школа искусств</p>
+        <p>© 2016—2017</p>
+    </footer>
 </div>
 
 <script src="js/jquery.js"></script>

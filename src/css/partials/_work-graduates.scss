@@ -1,11 +1,23 @@
 .work-graduates {
   text-align: center;
+  .title {
+    padding: 0 15px;
+  }
   &-list {
     display: flex;
     flex-wrap: wrap;
     li {
-      width: 25%;
+      width: 100%;
       padding: 0 14px 14px;
+      @include at('s') {
+        width: 50%;
+      }
+      @include at('m') {
+        width: 33%;
+      }
+      @include from('l') {
+        width: 25%;
+      }
     }
   }
   .img-work {

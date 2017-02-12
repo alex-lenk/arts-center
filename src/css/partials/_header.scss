@@ -1,12 +1,33 @@
 header {
-  padding-top: 15px;
-  padding-bottom: 20px;
+  padding: 15px 15px 20px;
   text-align: center;
+  @include from('s') {
+    padding-bottom: 15px;}
 }
 
 .header {
   &-logo {
     margin-bottom: 5px;
+    a, span {
+      display: flex;
+      justify-content: center;
+      @include to('s') {
+        flex-wrap: wrap;
+        img {
+          margin-bottom: 15px;
+        }
+      }
+    }
+    img {
+      @include from('m') {
+        &:first-of-type {
+          margin-right: 30px;
+        }
+      }
+      @include at('m') {
+        max-width: 60%;
+      }
+    }
   }
   &-caption {
     margin-bottom: 15px;
@@ -14,13 +35,20 @@ header {
     font-size: 18px;
   }
   &-info {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    @include from('s') {
+      margin-bottom: 15px;
+    }
+    @include to('s') {
+      flex-wrap: wrap;
+    }
     &-phone {
       font-size: 24px;
       color: #191a19;
+      white-space: nowrap;
       a {
         color: inherit;
         text-decoration: none;
@@ -34,10 +62,15 @@ header {
       font-size: 30px;
       color: #9444a9;
       font-family: 'RupsterScriptFree', 'BlissPro', Corbel, Arial, sans-serif;
+      @include to('s') {
+        width: 100%;
+        margin: 15px 0;
+      }
     }
   }
   &-nav {
     padding: 6px 0;
+    margin: 0 -14px;
     background-color: #6093e3;
     border: 1px solid #1a54ae;
     box-shadow: inset 0 0 3px 1px #7da7e8, inset 0 0 3px 1px #7da7e8;
@@ -50,9 +83,11 @@ header {
         font-size: 18px;
         text-transform: uppercase;
         color: #ffffff;
-        &:not(:last-child) {
-          border-right: 1px solid #3d70c0;
-          box-shadow: 1px 0 0 #82aced;
+        @include from('s') {
+          &:not(:last-child) {
+            border-right: 1px solid #3d70c0;
+            box-shadow: 1px 0 0 #82aced;
+          }
         }
         &:first-child a {
           &:not(:hover):not(.current)::before {
@@ -90,6 +125,38 @@ header {
           }
         }
       }
+
+      @include to('m') {
+        li {
+          text-align: center;
+          padding: 0 5px;
+        }
+        .current::before, a::before {
+          min-height: 46px;
+          display: block;
+          margin: 0 auto 5px;
+        }
+      }
+
+      @include to('s') {
+        li {
+          font-size: 14px;
+        }
+      }
+
+      @include to('xs') {
+        .text {
+          font-size: 8px;
+          visibility: hidden;
+          position: absolute;
+          top: 0;
+        }
+        .current::before, a::before {
+          min-height: 1px;
+          margin-bottom: 0;
+        }
+      }
+
       .current span {
         color: #d1ee93;
         border-bottom: 1px dotted;
@@ -106,9 +173,11 @@ header {
         &::before {
           background-image: url('../img/spritesheet.png');
           background-repeat: no-repeat;
-          margin-right: 15px;
-          display: inline-block;
-          vertical-align: middle;
+          @include from('l') {
+            margin-right: 15px;
+            display: inline-block;
+            vertical-align: middle;
+          }
           content: '';
         }
       }
