@@ -103,13 +103,17 @@
       box-shadow: inset 0 0 1px 1px #7da7e8, inset 0 0 1px 1px #7da7e8;
       display: flex;
       align-items: center;
-      @include from('l') {
-        width: 46%;
-        margin: 0 0 15px 15px;
+      transition: background-color .3s ease;
+      &:hover {
+        background-color: #fff;
       }
       @include from('s') {
         width: 48%;
         margin: 0 1% 15px;
+      }
+      @include from('l') {
+        width: 46%;
+        margin: 0 0 15px 15px;
       }
       &::before {
         position: absolute;

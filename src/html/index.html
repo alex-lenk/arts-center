@@ -36,16 +36,18 @@
         <div class="header-info-text">Детская Школа Искусств</div>
 
         <div>
-            <button class="btn btn-default">Записаться</button>
+            <button class="btn btn-default" data-toggle="modal" data-target="#toEnroll">Записаться</button>
         </div>
     </div>
 
     <nav class="header-nav">
         <ul class="header-nav-menu list-unstyled">
-            <li class="current"><span class="text">Преподаватели</span></li>
-            <li><a href="#"><span class="text">Аудитории</span></a></li>
-            <li><a href="#"><span class="text">Работы выпускников</span></a></li>
-            <li><a href="#"><span class="text">Контакты</span></a></li>
+            <li><span class="icon-teachers current"><span class="text">Преподаватели</span></span></li>
+            <li><a href="#" class="icon-audience"><span class="text">Аудитории</span></a></li>
+            <li><a href="#" class="icon-work"><span class="text">Работы выпускников</span></a></li>
+            <li data-toggle="modal" data-target="#feedbackForm">
+                <span class="icon-contacts"><span class="text">Контакты</span></span>
+            </li>
         </ul>
     </nav>
 </header>
@@ -228,7 +230,7 @@
             </div>
 
             <div role="tabpanel" class="tab-pane fade" id="embroidery">
-                <h2 class="courses-title icon-embroidery">Курсы макраме</h2>
+                <h2 class="courses-title icon-embroidery">Курсы вышивки</h2>
 
                 <ul class="courses-info-line list-unstyled">
                     <li class="text-bold">Принимаются дети:</li>
@@ -502,6 +504,120 @@
 <script src="js/jquery.js"></script>
 <script src="js/lib.js"></script>
 <script src="js/scripts.js"></script>
+
+<!-- Modal -->
+<div class="modal fade" id="toEnroll" tabindex="-1" role="dialog" aria-labelledby="toEnrollLabel">
+    <div class="modal-dialog" role="document">
+        <form action="/" class="general-form modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span></button>
+                <h3 class="modal-title" id="toEnrollLabel">Записаться на курсы</h3>
+            </div>
+
+            <div class="modal-body">
+                <p class="modal-sub-title text-center">Пожалуйста, заполните следующие поля.<br>
+                    Наш специалист свяжется с вами в ближайшее время.</p>
+
+                <div class="form-group">
+                    <label class="form-label" for="select-course">Выберите курс *</label>
+                    <select name="select-course" id="select-course" class="form-control">
+                        <option value="1">Курсы рисунка и живописи</option>
+                        <option value="1">Курсы мозаики</option>
+                        <option value="1">Курсы скульптуры</option>
+                        <option value="1">Курсы керамики</option>
+                        <option value="1">Курсы витража</option>
+                        <option value="1">Курсы вышивки</option>
+                        <option value="1">Курсы макраме</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="callOrder-name">Ваше имя *</label>
+                    <input type="text" name="name" id="callOrder-name" class="form-control hide-placeholder">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="callOrder-phone">Ваш телефон *</label>
+                    <input type="text" name="phone" id="callOrder-phone" class="form-control hide-placeholder"
+                           placeholder="+7 (___) ___-__-__">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-default">Отправить</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="feedbackForm" tabindex="-1" role="dialog" aria-labelledby="feedbackFormLabel">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                <h3 class="modal-title" id="feedbackFormLabel">Зарегистрироваться на бесплатное пробное занятие:</h3>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-6 col-xs-12">
+                            <form method="post" action="/" id="contact-form2">
+                                <div class="form-group">
+                                    <input type="text" class="form-control hide-placeholder" name="user_name" placeholder="Ваше имя *">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control hide-placeholder" name="user_email"
+                                           placeholder="Укажите Ваш e-mail*">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control hide-placeholder" name="user_phone"
+                                           placeholder="Укажите номер телефона">
+                                </div>
+                                <div class="form-group">
+                                    <select name="user_specialty" class="form-control">
+                                        <option value="1">Курсы рисунка и живописи</option>
+                                        <option value="1">Курсы мозаики</option>
+                                        <option value="1">Курсы скульптуры</option>
+                                        <option value="1">Курсы керамики</option>
+                                        <option value="1">Курсы витража</option>
+                                        <option value="1">Курсы вышивки</option>
+                                        <option value="1">Курсы макраме</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <textarea name="user_comments" class="form-control hide-placeholder" rows="5"
+                                              placeholder="Сообщение"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <button class="btn btn-default">Отправить сообщение</button>
+                                </div>
+                            </form>
+                    </div>
+                    <div class="col-md-6 col-xs-12">
+                        <h2 style="margin: 5px 0;">Телефон приёмной комиссии:<br/><span
+                                class="black">+7 495 201-13-00</span>
+                            <br/><span class="black" style="font-size: 16px;">+7 916 303-36-36</span></h2>
+
+                        <h2 style="margin:0 0 5px">Телефон по административным вопросам:<br/><span class="black">+7 964 641-43-00</span>
+                        </h2>
+                        <p><b>Наш адрес:<br/><span class="black">Москва, м. Новокузнецкая, Садовническая ул. 33, ауд. №214.</span></b>
+                        </p>
+
+                        <h3 style="margin: 45px 0 10px;">Как пройти от метро Новокузнецкая?</h3>
+                        <p>Выйти из метро налево, до трамвайных путей, повернуть налево и идти вдоль трамвайных путей по
+                            Садовническому проезду. Перейти мостик над Водоотводным каналом по правой стороне. Перейти
+                            перекрёсток через Садовническую улицу.<br/>
+                            Стоп! Здание Университета перед вами. Школа Компьютерной Графики и Дизайна на втором
+                            этаже.<br/>
+                            Весь путь занимает 5-7 минут.</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 </body>
 </html>

@@ -56,5 +56,46 @@
   height: 90px;
 }
 
+.icon-teachers {
+  &::before {
+    background-position: 0 -96px;
+    width: 46px;
+    height: 46px;
+  }
+  &:not(:hover):not(.current)::before {
+    background-position-x: -56px;
+  }
+}
 
+.icon-audience {
+  &::before {
+    background-position: 0 0;
+    width: 50px;
+    height: 37px;
+  }
+  &:not(:hover)::before {
+    background-position-x: -60px;
+  }
+}
 
+.icon-work {
+  &::before {
+    background-position: -120px 0;
+    width: 50px;
+    height: 42px;
+  }
+  &:not(:hover)::before {
+    background-position-y: -52px;
+  }
+}
+
+.icon-contacts {
+  &::before {
+    background-position: 0 -47px;
+    width: 50px;
+    height: 39px;
+  }
+  &:not(:hover)::before {
+    background-position-x: -60px;
+  }
+}

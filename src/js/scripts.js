@@ -14,4 +14,11 @@ $(document).ready(function () {
     });
 
     $("[data-fancybox]").fancybox();
+
+    $("select").click(
+        function () {
+            var e = $( this );
+            e.addClass("chose-select");
+        }
+    );
 });

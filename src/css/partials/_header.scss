@@ -2,7 +2,8 @@ header {
   padding: 15px 15px 20px;
   text-align: center;
   @include from('s') {
-    padding-bottom: 15px;}
+    padding-bottom: 15px;
+  }
 }
 
 .header {
@@ -67,6 +68,10 @@ header {
         margin: 15px 0;
       }
     }
+
+    .btn {
+      font-size: 24px;
+    }
   }
   &-nav {
     padding: 6px 0;
@@ -89,41 +94,6 @@ header {
             box-shadow: 1px 0 0 #82aced;
           }
         }
-        &:first-child a {
-          &:not(:hover):not(.current)::before {
-            background-position: -56px -96px;
-          }
-        }
-        &:nth-child(2) a {
-          &::before {
-            width: 50px;
-            height: 37px;
-            background-position: 0 0;
-          }
-          &:not(:hover):not(.current)::before {
-            background-position: -60px 0;
-          }
-        }
-        &:nth-child(3) a {
-          &::before {
-            background-position: -120px 0;
-            width: 50px;
-            height: 42px;
-          }
-          &:not(:hover):not(.current)::before {
-            background-position: -120px -52px;
-          }
-        }
-        &:last-child a {
-          &::before {
-            background-position: 0 -47px;
-            width: 50px;
-            height: 39px;
-          }
-          &:not(:hover):not(.current)::before {
-            background-position: -60px -47px;
-          }
-        }
       }
 
       @include to('m') {
@@ -131,7 +101,7 @@ header {
           text-align: center;
           padding: 0 5px;
         }
-        .current::before, a::before {
+        [class^="icon-"]::before, [class*=" icon-"]::before {
           min-height: 46px;
           display: block;
           margin: 0 auto 5px;
@@ -151,40 +121,26 @@ header {
           position: absolute;
           top: 0;
         }
-        .current::before, a::before {
+        [class^="icon-"]::before, [class*=" icon-"]::before  {
           min-height: 1px;
           margin-bottom: 0;
         }
       }
 
-      .current span {
+      .current .text {
         color: #d1ee93;
         border-bottom: 1px dotted;
       }
-      .current, li:first-child a {
-        &::before {
-          width: 46px;
-          height: 46px;
-          background-position: 0 -96px;
-        }
-      }
-      .current, a {
-        text-decoration: none;
-        &::before {
-          background-image: url('../img/spritesheet.png');
-          background-repeat: no-repeat;
-          @include from('l') {
-            margin-right: 15px;
-            display: inline-block;
-            vertical-align: middle;
-          }
-          content: '';
+      [class^="icon-"]::before, [class*=" icon-"]::before {
+        @include from('l') {
+          margin-right: 15px;
         }
       }
       a {
         color: inherit;
         display: block;
         transition: all .3s ease;
+        text-decoration: none;
         &:hover {
           color: #d1ee93;
         }

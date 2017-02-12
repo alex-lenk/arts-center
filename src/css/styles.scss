@@ -4,12 +4,19 @@
 @import "partials/fonts";
 @import "partials/icons";
 @import "partials/common";
+@import "lib/grid";
+@import "partials/forms";
 @import "partials/btn";
 @import "partials/header";
 @import "partials/courses";
 @import "partials/teachers";
 @import "partials/audience";
 @import "partials/work-graduates";
+
+.row {
+  margin: 0 -15px;
+  @include clearfix;
+}
 
 .content {
   margin: 30px 0;
@@ -43,4 +50,9 @@ footer {
   p {
     margin-bottom: 5px;
   }
+}
+
+.modal-header {
+  background-color: #6093e3;
+  color: #fff;
 }
