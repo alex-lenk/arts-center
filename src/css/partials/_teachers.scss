@@ -3,9 +3,6 @@
   .title {
     margin: 0 0 35px;
     line-height: 1;
-    a {
-      text-decoration: none;
-    }
   }
   &-list {
     text-align: center;
@@ -28,7 +25,7 @@
       }
       &:first-child, &:nth-child(2) {
         .teachers-photo::before {
-          background: url("../img/border-staff.png") no-repeat center;
+          background: url(../img/border-staff.png) no-repeat center;
           background-size: contain;
         }
       }
@@ -58,6 +55,7 @@
     }
   }
   &-name {
+    font-weight: bold;
     .text-uppercase {
       display: block;
     }

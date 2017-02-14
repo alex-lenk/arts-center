@@ -1,6 +1,6 @@
 [class^="icon-"], [class*=" icon-"] {
   &::before {
-    background-image: url('../img/spritesheet.png');
+    background-image: url(../img/spritesheet.png);
     background-repeat: no-repeat;
     display: inline-block;
     vertical-align: middle;
@@ -62,9 +62,6 @@
     width: 46px;
     height: 46px;
   }
-  &:not(:hover):not(.current)::before {
-    background-position-x: -56px;
-  }
 }
 
 .icon-audience {
@@ -72,9 +69,6 @@
     background-position: 0 0;
     width: 50px;
     height: 37px;
-  }
-  &:not(:hover)::before {
-    background-position-x: -60px;
   }
 }
 
@@ -84,9 +78,6 @@
     width: 50px;
     height: 42px;
   }
-  &:not(:hover)::before {
-    background-position-y: -52px;
-  }
 }
 
 .icon-contacts {
@@ -94,8 +85,5 @@
     background-position: 0 -47px;
     width: 50px;
     height: 39px;
-  }
-  &:not(:hover)::before {
-    background-position-x: -60px;
   }
 }
